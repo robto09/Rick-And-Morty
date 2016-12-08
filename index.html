@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appRick">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Rick and Morty</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="myCtrl">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Rick and Morty</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li ng-repeat="item in menu" ng-cloak>
+                        <a class="page-scroll" href="#{{item.hf}}">{{item.title}}</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Rick and Morty</h1>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About Section</h1>
+                    <p>Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan
+                        Harmon for Adult Swim. The series follows the misadventures of mad scientist Rick and his fretful,
+                        easily influenced grandson Morty, who split their time between domestic family life and interdimensional
+                        adventures. Roiland voices the series' eponymous characters, with the voice talent of Chris Parnell,
+                        Spencer Grammer, and Sarah Chalke providing the rest of the family. The series has its origins in
+                        an animated parody of Back to the Future created by Roiland for film festival Channel 101. Adult
+                        Swim approached Harmon for television show ideas, and he and Roiland developed the program based
+                        on the short's two characters.The series premiered on December 2, 2013, to critical acclaim.[1] In
+                        January 2014, the series was renewed for a second season which premiered on July 26, 2015. In August
+                        2015, Adult Swim renewed the series for a 14-episode third season.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Plot Section -->
+    <section id="plot" class="plot-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Plot Section</h1>
+                    <p>Rick Sanchez is an alcoholic scientific genius who has moved in with the family of his daughter Beth,
+                        who is a veterinarian and equine cardiac surgeon. He splits his time between developing endless arcane
+                        projects and taking his teenage grandson Morty (and, with increasing occurrence, his older teenage
+                        granddaughter Summer) on dangerous and surreal adventures throughout the multiverse. Compounded with
+                        preexisting tensions within the family, these events cause the sensitive Morty much distress at home
+                        and school. With the exception of the pilot episode, each episode ends with a post-credits scene.
+                        Rick and Morty can be considered a cosmic horror, given the callous and inhumane resolutions presented
+                        in most episodes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="characters-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Characters Section</h1>
+                    <ul>
+                        <li>
+                            <p>Rick Sanchez (voiced by Justin Roiland)[5] – An eccentric and alcoholic mad scientist who is
+                                the father of Beth, the father-in-law of Jerry, and the maternal grandfather of Morty and
+                                Summer. His irresponsible tendencies lead Beth and Jerry to worry about the safety of their
+                                son Morty. The series is often retroscripted for Rick's ad-hoc lines, which frequently include
+                                'burp-talking' in the middle of a sentence while speaking. He displays "diagnosable qualities
+                                of various mental illnesses." A maverick character that views his time as valuable,[6] he
+                                eschews many ordinary conventions such as school, marriage, and even love. His disdainful
+                                or bored reaction to the mundane requests asked of him by Morty and his family suggests a
+                                sense of superiority, particularly towards Jerry; however, in several instances throughout
+                                the series Ricks shows a lonelier side. He is identified as being the Rick of Dimension C-137.</p>
+                        </li>
+                        <li>
+                            <p>Morty Smith (voiced by Justin Roiland)[5] – Rick's good-hearted but easily distressed 14-year-old
+                                grandson who is frequently dragged into Rick's misadventures. His naive but grounded moral
+                                compass plays counterpoint to Rick's Machiavellian ego. He is typically reluctant to follow
+                                along with Rick's plans, and he often ends up traumatized by the unorthodox and morally questionable
+                                methods Rick uses to 'fix' situations. The Morty of C-137 is referred to as the "MortiestMorty"
+                                by Rick. Some alternate Mortys refer to him as the "one true Morty". Though their relationship
+                                is frequently antagonistic, Morty's role as sidekick is necessary because his "Morty brainwaves"
+                                cancel out Rick's "genius brainwaves", preventing Rick's numerous inter-dimensional enemies
+                                from tracking him down. Rick displays occasional signs of genuine affection for Morty in
+                                spite of his disaffected demeanor, and similarly Morty can sometimes develop investment and
+                                enthusiasm for their adventures. He is identified as being the Morty of Dimension C-137.</p>
+                        </li>
+                        <li>
+                            <p>Beth Smith (née Sanchez) (voiced by Sarah Chalke) – Rick's daughter, Jerry's wife, and Summer
+                                and Morty's mother. She is a cardiac surgeon for horses. Generally level-headed, she struggles
+                                with her husband's ego, swelled from defiance of his obvious mediocrity. Several episodes
+                                deal with Beth's dissatisfaction with her life, stemming from a belief that she "settled"
+                                in her marriage, family, and job. She wanted to become a human cardiac surgeon but became
+                                pregnant with Summer at 17 years old. She is the most successfully assertive force in the
+                                household, and can at times be selfish. Beth is unperturbed by her father's destructive and
+                                reckless tendencies, as she has viewed Rick more favorably than her late mother since their
+                                separation in her childhood.[6] Harmon expanded upon this origin in an interview: "Kids can
+                                sometimes idolize their worst parent and blame their supportive parent for chasing off the
+                                dad with the guts to leave. [...] She believes that Rick, as crazy as he is, is the better
+                                of her two parents even though she was raised by her mother and she blames her mother’s unremarkability
+                                on her father’s departure and will do anything to keep her father back in her life."[6] Jerry
+                                sees Beth as overly controlling.</p>
+                        </li>
+                        <li>
+                            <p>Jerry Smith (voiced by Chris Parnell)[5] – Summer and Morty's father, Beth's husband, and Rick's
+                                son-in-law, who strongly disapproves of Rick's influence over Morty. Generally insecure,
+                                Jerry is frequently led into conflicts stemming from opportunistic posturing. He is generally
+                                disapproving of Rick, and his marriage to Beth is often rocked by these upsets. Jerry worked
+                                at a low-level advertising agency until he was fired for incompetence. The episode "Mortynight
+                                Run" reveals that one of the Ricks, keenly aware that every Jerry is incapable of surviving
+                                off of Earth, created a daycare where Jerrys from various dimensions are dropped off by their
+                                Rick and Morty during adventures should he attempt to accompany them. It is revealed in the
+                                same episode that in some dimensions, Beth has left Jerry and remarried. Beth views Jerry
+                                as meek under his boasts, ultimately fearful of confrontation. At various points in the series,
+                                Beth and Jerry's marriage is said to be maintained for the sake of the kids. It is also strongly
+                                suggested that in spite of their problems with one another, Beth and Jerry are emotionally
+                                co-dependent.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Summer Smith (voiced by Spencer Grammer)[5] – Morty's 17-year-old older sister, a more conventional
+                                and often superficial teenager, is obsessed with improving her status with her peers. Summer
+                                is generally similar to her mother, but she has shown elements of both Jerry's approval-seeking
+                                and Rick's devil-may-care attitude. She occasionally expresses jealousy that Morty gets to
+                                accompany Rick on his inter-dimensional adventures. In the second season, she accompanies
+                                Rick and Morty on adventures more frequently.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Section -->
+    <section id="production" class="production-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Production Section</h1>
+                    <h3>Writing</h3>
+                    <p>The general formula of Rick and Morty consists of the juxtaposition of two conflicting scenarios: an
+                        extremely selfish, alcoholic grandfather dragging his grandson across space for intergalactic and/or
+                        interdimensional adventures, intercut with domestic family drama.[6][10] This has led Harmon to describe
+                        the series as a cross between Matt Groening's two shows The Simpsons and Futurama, balancing family
+                        life with heavy science fiction.[13] Roiland stated his and Harmon's intentions for the series to
+                        lack traditional continuity, opting for discontinuous storylines "not bound by rules". In a similar
+                        interview session at the 2013 San Diego Comic-Con International, he described each episode as being
+                        "[its] own point of entry."[14]</p>
+                    <p>The first season writing staff consisted of Roiland, Harmon, Tom Kauffman, Ryan Ridley, Wade Randolph,
+                        Eric Acosta, while writer's assistant Mike McMahan was also given writing credit. Described as a
+                        "very, very tiny little writers' room with a lot of heavy lifting from everybody," the show's writing
+                        staff, like many Adult Swim productions, is not unionized with the Writers' Guild of America.[13]
+                        The writing staff first meets and discusses ideas, which evolve into a story.[7] Discussions often
+                        include anecdotes from personal life as well as thoughts on the science fiction genre.[9] After breaking
+                        the story—which consists of developing its consistency and logical beginning, middle, and conclusion—a
+                        writer is assigned to create an outline. Roiland and Harmon do a "pass" on the outline, and from
+                        there the episode undergoes several more drafts. The final draft of the script is last approved by
+                        either of the co-creators.[7] In producing the series' first season, episodes were occasionally written
+                        out of order. For example, "Rick Potion #9" was the second episode written for the series, but was
+                        instructed to be animated as the fifth, as it would make more sense within the series' continuity.[7]
+                        The series is inspired by British-style storytelling, as opposed to traditional American "family
+                        TV" stories.[7] Harmon noted that the writers room at the show's studio bears a striking resemblance
+                        to the one used for Community.[9] In comparing the two, he noted that the writing staff of Rick and
+                        Morty was significantly smaller, and more "rough and tumble verbally," commenting, "There's a lot
+                        more Legos and Nerf guns."[9]</p>
+                    <p>Many episodes are structured with use of a story circle, a Harmon creation based largely on Joseph Campbell's
+                        monomyth, or The Hero's Journey. Its two-act structure places it at an odd location in the stages
+                        of the monomyth, after The Meeting with the Goddess, instead of Atonement with the Father.[11] Harmon
+                        has stated that his inspiration behind much of the concept and humor for the series comes from various
+                        British television series, such as The Hitchhiker's Guide to the Galaxy and Doctor Who. He figures
+                        that the audience will only understand developments from Morty's point of view, but stated "we don't
+                        want to be the companions. We want to hang out with the Doctor, we idolize the Doctor, but we don't
+                        think like him, and that's really interesting, Rick is diseased, he's mentally ill, he's an absolute
+                        lunatic because he lives on this larger scale</p>
+                    <h3>Animation</h3>
+                    <p>Roiland's cartooning style is heavily indebted to The Simpsons, a factor he acknowledged in a 2013 interview,
+                        while also comparing his style to that of Pendleton Ward (Adventure Time) and J.G. Quintel (Regular
+                        Show): "You'll notice mouths are kind of similar and teeth are similar, but I think that's also a
+                        stylistic thing that... all of us are kind of the same age, and we're all inspired by The Simpsons
+                        and all these other shows we're kind of subconsciously tapping into."[13]</p>
+                    <p>According to one of the technical directors, animation is done using Toon Boom Harmony with post production
+                        work done in Adobe After Effects. The background art for the show is done in Adobe Photoshop. Production
+                        of animation is handled by Bardel Entertainment in Canada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- philosophy Section -->
+    <section id="philosophy" class="philosophy-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Philosophy Section</h1>
+                    <p>There has been discussion among viewers about the philosophy of Rick and Morty.[  The show most frequently
+                        adopts an existentialist perspective, evident both in Rick's general behavior, and from numerous
+                        character observations of events. A frequently-cited example is a point Morty makes in the first
+                        season episode "Rixty Minutes", where he argues that Summer shouldn't leave home out of anger after
+                        learning of alternative realities where her parents were happier without her: </p>
+                    <p>On one of our adventures, Rick and I basically destroyed the whole world, so we bailed on that reality
+                        and we came to this one, because in this one, the world wasn't destroyed and in this one, we were
+                        dead. So we came here, a- a- and we buried ourselves and we took their place. And every morning,
+                        Summer, I eat breakfast twenty yards away from my own rotting corpse. [...] Nobody exists on purpose,
+                        nobody belongs anywhere, everybody's gonna die. Come watch TV?</p>
+                    <p>This statement heavily resembles a quote from French existentialist Jean-Paul Sartre:</p>
+                    <p>Every existing thing is born without reason, prolongs itself out of weakness, and dies by chance. Another
+                        way in which the show appears to convey existentialist thought are its constant reminders of the
+                        insignificance of Earth in relation to the universe</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- other-media Section -->
+    <section id="other" class="other-media-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>In other media</h1>
+                    <h3>Comics</h3>
+                    <p>At New York Comic Con 2014, editor-in-chief of Oni Press, James Lucas Jones, announced that a Rick and
+                        Morty comic book adaptation would be released in early 2015.[44] On April 1, 2015, the series debuted
+                        with its first monthly issue, entitled "BAM!"[45] The series is written by Zac Gorman and illustrated
+                        by CJ Cannon.[46] Artist Tom Fowler wrote a multi-issue story arc that began in March, 2016.</p>
+                    <p>See comic online (it redirects to this links when click <a href="http://www.readcomics.tv/comic/rick-and-morty-2015"
+                            target="_blank">readcomics</a> )</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Video</h1>
+                    <div class="item">
+                        <div class="col-md-2">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="img/rick/rick-video.jpg" alt="">
+                                <div class="overlay">
+                                    <h2>Rick and Morty Season 1</h2>
+                                    <a class="info" href="http://kisscartoon.me/Cartoon/Rick-and-Morty" target="_blank">Go</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Photo Section -->
+    <section id="photos" class="photo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Photos</h1>
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="item in imageGallery" ng-cloak>
+                                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-image="{{item.src}}" data-target="#image-gallery">
+                                    <img class="img-responsive" src="{{item.src}}" alt="Short alt text">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+     
+                                    <div class="modal-body">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                        <img id="image-gallery-image" class="img-responsive" src="">
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
+                                        </div>
+
+                                        <div class="col-md-8 text-justify" id="image-gallery-caption">
+                                            
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <button type="button" id="show-next-image" class="btn btn-default">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+    <script src="script/index.js"></script>
+
+    <script>
+   $(document).ready(function(){
+
+    loadGallery(true, 'a.thumbnail');
+
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current){
+        $('#show-previous-image, #show-next-image').show();
+        if(counter_max == counter_current){
+            $('#show-next-image').hide();
+        } else if (counter_current == 1){
+            $('#show-previous-image').hide();
+        }
+    }
+
+    /**
+     *
+     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+     * @param setClickAttr  Sets the attribute for the click handler.
+     */
+
+    function loadGallery(setIDs, setClickAttr){
+        var current_image,
+            selector,
+            counter = 0;
+
+        $('#show-next-image, #show-previous-image').click(function(){
+            if($(this).attr('id') == 'show-previous-image'){
+                current_image--;
+            } else {
+                current_image++;
+            }
+
+            selector = $('[data-image-id="' + current_image + '"]');
+            updateGallery(selector);
+        });
+
+        function updateGallery(selector) {
+            var $sel = selector;
+            current_image = $sel.data('image-id');
+            $('#image-gallery-caption').text($sel.data('caption'));
+            $('#image-gallery-title').text($sel.data('title'));
+            $('#image-gallery-image').attr('src', $sel.data('image'));
+            disableButtons(counter, $sel.data('image-id'));
+        }
+
+        if(setIDs == true){
+            $('[data-image-id]').each(function(){
+                counter++;
+                $(this).attr('data-image-id',counter);
+            });
+        }
+        $(setClickAttr).on('click',function(){
+            updateGallery($(this));
+        });
+    }
+});
+		
+    </script>
+
+    </script>
+</body>
+
+</html>
